@@ -9,11 +9,15 @@ const api_details = {
 
 const input = document.querySelector('.input-search');
 input.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        showResults();
-    }
+    if (e.keyCode === 13) {
+        document.getElementById("enterButton").click();
+      }
 });
-
+document.getElementById("enterButton").addEventListener("click", function() {
+    
+    showResults();
+    
+  });
 async function showResults() {
     const data = await fetch(`${api_details.url}weather?q=${input.value}&units=metric&APPID=${api_details.api_key}`)
     const fdata = await data.json();

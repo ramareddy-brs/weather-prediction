@@ -282,3 +282,6 @@ footer {
 .theme-switch-yellow_sea:hover {
   box-shadow: 2px 2px 2px var(--yellow_sea);
 }
+#enterButton {
+    margin-left: 10px;
+}
